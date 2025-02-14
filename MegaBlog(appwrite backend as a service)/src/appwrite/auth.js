@@ -18,10 +18,11 @@ export class AuthService {
             if(userAccount) {
                 //call another method
                 return this.login({email, password})
-            } else{
-                return userAccount
-            }
+            } 
+            throw new Error("Account creation failed");
+
         } catch (error) {
+            console.error("Error creating account:", error.message);
             throw error
         }
     }
