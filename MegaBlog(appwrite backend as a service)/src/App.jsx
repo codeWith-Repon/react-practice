@@ -14,6 +14,7 @@ function App() {
   useEffect(()=>{
     authService.getCurrentUser()
     .then((userData) => {
+      console.log('userData when login', userData)
       if (userData) {
         dispatch(login({userData}))
       } else {
