@@ -58,6 +58,7 @@ export class Service{
     }
 
     async deletePost(slug){
+        console.log("image delete succfully (featuredImage) ", slug)
 
         try {
 
@@ -103,6 +104,7 @@ export class Service{
     //file upload service
 
     async uploadFile(file){
+        console.log("file upload", file)
         try {
             return await this.bucket.createFile(
                 conf.appwriteBucketId,
@@ -116,6 +118,7 @@ export class Service{
     }
 
     async deleteFile(fileId){
+        console.log("deleteFile :::", fileId)
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId,
