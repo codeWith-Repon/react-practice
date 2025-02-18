@@ -76,7 +76,7 @@ const PostForm = ({ post }) => {
   useEffect(() => {
     const subscription = watch(
       (value, { name }) => {
-        console.log("watch value ", value, "name", { name });
+        console.log("watch value ", value, "name",  name );
 
         if (name === "title") {
           setValue(
